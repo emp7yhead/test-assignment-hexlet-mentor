@@ -2,7 +2,7 @@ install:
 	@poetry install
 
 run:
-	@poetry run fizzbuzz
+	@poetry run fizz_buzz
 
 lint:
 	@poetry run flake8 fizzbuzz
