@@ -16,5 +16,8 @@ test-coverage:
 build:
 	@poetry build
 
+docker-build:
+	@docker build . -t fizz_buzz
+
 package-install:
 	@python3 -m pip install --user dist/*.whl
