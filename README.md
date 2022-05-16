@@ -1,6 +1,7 @@
 # test-assignment-hexlet-mentor
 [![CI](https://github.com/emp7yhead/test-assignment-hexlet-mentor/actions/workflows/main.yml/badge.svg)](https://github.com/emp7yhead/test-assignment-hexlet-mentor/actions/workflows/main.yml)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/871e0e2f47d57f96bbd4/test_coverage)](https://codeclimate.com/github/emp7yhead/test-assignment-hexlet-mentor/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0921313b4ce9d847f6a8/maintainability)](https://codeclimate.com/github/emp7yhead/test-assignment-hexlet-mentor/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0921313b4ce9d847f6a8/test_coverage)](https://codeclimate.com/github/emp7yhead/test-assignment-hexlet-mentor/test_coverage)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
 Тest assignment for a python mentor position at hexlet.io.
