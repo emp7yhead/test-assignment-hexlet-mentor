@@ -1,13 +1,31 @@
-FROM python:3.10.4
+FROM python:3.10.4-slim-bullseye
 
-WORKDIR /usr/src/fizzbuzz
+ENV PYTHONFAULTHANDLER=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=on \
+    POETRY_VERSION=1.1.13 \
+    POETRY_NO_INTERACTION=1 \
+    POETRY_VIRTUALENVS_CREATE=false \
+    POETRY_CACHE_DIR='/var/cache/pypoetry' \
+    PATH="$PATH:/root/.local/bin"
 
-COPY requirements.txt ./
+RUN apt-get update && apt-get upgrade -y \
+    && apt-get install --no-install-recommends -y \
+    curl \
+    make \
+    && curl -sSL 'https://install.python-poetry.org' | python - \
+    && poetry --version
 
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /code
 
-COPY . .
+COPY poetry.lock pyproject.toml /code/
 
-ENV PYTHONPATH="${PYTHONPATH}:/usr/src/fizzbuzz"
+RUN poetry install --no-dev --no-root --no-interaction --no-ansi
+ 
+COPY . /code
 
-CMD [ "python", "./fizzbuzz/scripts/game.py" ]
+RUN make build \
+    && make package-install
+
+CMD ["fizz_buzz"]
