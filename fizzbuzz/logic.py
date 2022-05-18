@@ -20,4 +20,4 @@ def get_fizz_buzz(number: int) -> Union[str, int]:
         final_result += 'Fizz'
     if number % BUZZ_DIVIDER == 0:
         final_result += 'Buzz'
-    return final_result if final_result else number
+    return final_result or number
