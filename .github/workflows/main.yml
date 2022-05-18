@@ -1,19 +1,17 @@
-# This is a basic workflow to help you get started with Actions
 name: CI
 on: push
 jobs:
- linter-check:   
+  test-and-linter-check:   
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.10.0]
+        python-version: [3.10.0, 3.10.4, 3.11.0]
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-        # make depends on poetry
       - name: Install dependencies
         run: |
           pip install poetry
