@@ -22,4 +22,4 @@ def start_game(play_game: Callable[[int], Union[str, int]]) -> None:
         if isinstance(final_result, str):
             print(f'{final_result}!')
         else:
-            print(f'{final_result}')
+            print(final_result)
