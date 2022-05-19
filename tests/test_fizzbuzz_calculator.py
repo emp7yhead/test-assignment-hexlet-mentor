@@ -1,6 +1,6 @@
 """Tests for fizzbuzz."""
 import pytest
-from fizzbuzz.logic import get_fizz_buzz
+from fizzbuzz.fizzbuzz_calculator import get_fizz_buzz
 
 
 def test_fizz():

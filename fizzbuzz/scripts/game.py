@@ -2,8 +2,8 @@
 """Main script for FizzBuzz."""
 import sys
 
+from fizzbuzz.fizzbuzz_calculator import get_fizz_buzz
 from fizzbuzz.game_starter import start_game
-from fizzbuzz.logic import get_fizz_buzz
 
 
 def main() -> None:
