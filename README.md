@@ -52,6 +52,10 @@ The following options can be used for installation:
     make docker-build
     ```
     <img src="https://media2.giphy.com/media/MijRnnJjcmwUxkHNA3/giphy.gif?cid=790b761175b24218045264b479bf400f13fb3036e132304a&rid=giphy.gif&ct=g" width="640"/>
+- ## GitHub Packages:
+    ```
+    docker pull ghcr.io/emp7yhead/fizz_buzz:main
+    ```
 ---
 ## Launch:
 - If you choose installation with `pip` or `Poetry` use command:
@@ -62,6 +66,14 @@ The following options can be used for installation:
 
 - If you choose installation with `Docker` use command:
     ```
-    docker run -ti fizz_buzz
+    make docker-run
     ```
-    <img src="https://media2.giphy.com/media/sBX9tub4daHd42rDE2/giphy.gif?cid=790b7611e97c3c1d470598d7e4631d954c3ab11dbd52dc24&rid=giphy.gif&ct=g" width="640"/>
+    <img src="https://media4.giphy.com/media/SlPhiSKltbisVJrx8C/giphy.gif" width="640"/>
+
+- If you choose installation with `GitHub Packages` use command:
+    ```
+    docker run -ti ghcr.io/emp7yhead/fizz_buzz:main
+    ```
+  
+    <img src="https://media3.giphy.com/media/ywXHHa0otFQD2Lj2WZ/giphy.gif?cid=790b7611fca9890c0b0fd4694e8b431d9d0c2ed337cd47fe&rid=giphy.gif&ct=g" width="640" />
+  
